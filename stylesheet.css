@@ -1,0 +1,167 @@
+body{
+  margin: 0px;
+  background-color: #F0F2F5;
+}
+.mainlogo{
+margin-top: 140px;
+margin-left: 20%;
+margin-right: auto;
+width: 50%;
+height: auto;
+}
+.logo{
+  float: left;
+  background-color: #4F5B63;
+  width: 50%;
+  height: 100vh;
+}
+#login_id{
+  height: 600px;
+}
+.login{
+  float: right;
+  border: 0px solid ;
+  width: 400px;
+  height: 500px;
+  margin-right: 5%;
+  margin-top: 160px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+input[type= email] {
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+input[type= text] {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  
+}
+input[type= password] {
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+input[type= number ] {
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.quantity{
+  width: 95%;
+}
+input[type= tel] {
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+#create_new_account{
+  width: 80%;
+  background-color: #4CAF50;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+input[type=submit] {
+  width: 80%;
+  background-color: #4CAF50;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.name{
+  margin-top: 90px;
+  font-weight: bold;
+  color: #4F5B63;
+}
+#forgottenpwd{
+  display: block;
+  text-decoration: none;
+  margin-top: 15px;
+}
+#hr {
+  display: block;
+  width: 95%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+.htm{
+width: 90px; 
+float: left;
+margin-left: 8px;
+}
+
+.lib{
+float: left;
+}
+.rad{
+float: right;
+}
+#gst{
+ 
+}
+#main_std{
+  margin-top: 23px;
+  margin-left: 8px;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input {
+  content: 'Upload Your ID Img';
+  display: inline-block;
+  border-radius: 3px;
+  padding: 5px 8px;
+  cursor: pointer;
+  margin-left: 8px;
+  background-color: #4CAF50;
+  color: #F0F2F5;
+  font-weight: bold;
+ 
+}
