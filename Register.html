@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+
+      <div class="logo">
+       <a href="index.php"><img src="mainlogo1.PNG" alt="mainlogo" class="mainlogo"></a> 
+      </div>
+      <div class="login" id="login_id">
+        <div class="name">
+          <form action="registerv2.php" method="post"enctype="multipart/form-data">
+            <h2>Sign Up</h2>
+            <input type="text" name="fname" placeholder="Enter Your First Name" required>
+            <input type="text" name="lname" placeholder="Enter Your Last Name" required>
+            <input type="email" name="email" placeholder="Enter Your Email" required>
+            <input type="tel" name="phone_number" placeholder="Enter Your your Ph:no" required>
+            <input type="password" name="pwd" placeholder="Enter Your password" required>
+            
+            <div >
+              <div class="htm">
+              <div class = "rad">
+              <input type="radio" id="html" name="identity" value="Student"></div>
+              <div class = "lib">  <label for="html">Student</label><br></div>
+              </div>
+              <div class="htm" id="gst">
+              <div class = "rad">
+              <input type="radio" id="html" name="identity" value="Faculty" required></div>
+              <div class = "lib">  <label for="html">Faculty</label><br></div>
+              </div>
+              <div class="htm" id="employeement">
+                <div class = "rad">
+                <input type="radio" id="html" name="identity" value="Employee"></div>
+                <div class = "lib">  <label for="html">Employee</label><br></div>
+                </div>
+                <div class="htm" id="employeement">
+                  <div class = "rad">
+                  <input type="radio" id="html" name="identity" value="other"></div>
+                  <div class = "lib">  <label for="html">Other</label><br></div>
+                  </div>
+            </div>
+            <p id="main_std">Upload Your ID</p>
+            <input type="file" name="image" class="custom-file-input" accept ="image/*" required>
+            <input type="submit" name="submit" value="Sign Up">
+            <center class="forget"><a href="login.php">already have an account? Sign in </a></center>
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+  </body>
+</html>
