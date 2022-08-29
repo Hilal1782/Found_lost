@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +17,13 @@ session_start();
 <body>
 
     <!-- This is the start of hearder -->
-
+    
 
     <header>
 
         <!--Web Logo is the main logo of website-->
 
-        <a href="index.php" class="Web-Logo"><span>LOST</span> & <span>Found</span></a>
+        <a href="#" class="Web-Logo"><span>LOST</span> & <span>Found</span></a>
 
         <!--This is the navigation bar-->
 
@@ -42,42 +45,58 @@ session_start();
 
         <!--This is the login buttion inside website-->
 
+        <!--This is the login buttion inside website-->
+
         <?php
-        if(isset($_SESSION['useremail']))
-        {
+        if(isset($_SESSION['useremail']))  
+        {     
             echo'
             <div>
+
             <a href="logout.php">
                 <input type="submit" value="logout" name= "main_login_btn" id="login-button">
                 <div class="navbar1"></div>
             </a>
             <p class="navbar1">'.ucfirst($_SESSION['username']).'</p>
+            
+
         </div>';
 
-
-
-
+       
+        
+        
         }  else{
             echo'
             <div>
+
             <a href="login.php">
                 <input type="submit" value="login" name= "main_login_btn" id="login-button">
             </a>
+
         </div>';
-
+        
         }
-
+        
         ?>
 
 
     </header>
 
+
+
+
+
     <!--This is the end of header section-->
 
-    <!-- Contact us form-->
 
+
+
+
+
+    
+     
     <div id="main-con">
-        <h1 id="con_h">Contact Us</h1>
+        <h1 id="con_h">Contact Us</h1>  
 
         <form action="" method="">
             <label for="fname" class="name" id="name">Enter Your First Name</label>

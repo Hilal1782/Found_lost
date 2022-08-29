@@ -1,7 +1,9 @@
 <?php
 session_start();
-
-
+if(!isset($_SESSION['useremail'])){
+    header('location:login.php');
+   exit();
+}
 
 
 ?>
@@ -11,11 +13,10 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Resquest for Found</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-
     <!-- This is the start of hearder -->
     
 
@@ -34,11 +35,11 @@ session_start();
             <div class="dropdown">
                 <a href = '#'>Request</a>
                     <div class="dropdown-content">
-                        <a href="request_found.php">Request for Found</a>
+                        <a href="#">Request for Found</a>
                         <a href="request_lost.php">Request for Lost</a>
                     </div>
             </div>
-            <a href="#">About Us</a>
+            <a href="aboutUs.php">About Us</a>
             <a href="contactUs.php">Contact Us</a>
 
         </nav>
@@ -79,16 +80,53 @@ session_start();
         
         ?>
 
-
     </header>
 
     <!--This is the end of header section-->
-    <div class="main_aboutUs">
-        <h1 class="aboutus_h">About Us</h1>
-        <p class="para_aboutus">We are Company providing a service for finding you missplaced belongings.
-        Losing or misplacing your belongings may be aggravating, and locating them can be difficult. Finding your lost property is one of the most time-consuming processes. Most of the time finding your belongings could cast you weeks and even months and sometimes one will never find personal possessions and will cast you a significant amount of money.</p>
-        <h2 class="aboutus_h" >How it works</h2>
-        <p class ="para_aboutus">Losing or misplacing your belongings may be aggravating, and locating them can be difficult. Finding your lost property is one of the most time-consuming processes. Most of the time finding your belongings could cast you weeks and even months and sometimes one will never find personal possessions and will cast you a significant amount of money.</p>
+
+
+<!-- the form for Request for Lost Start here -->
+
+
+
+    <div id="main-con">
+        <div class="found_title">
+            <h1 id="con_h">Request for Found</h1>  
+        </div>
+        <div>
+
+            <form action="found_data.php" method="post" enctype="multipart/form-data">
+                <label for="title" class="name" id="name">Enter Your Title/Name of the found object</label>
+                <input type="text" class="fname" name="title" placeholder="Enter Your Title/Name of Found object" required>
+                <br>
+                <label for="ph:no" class="name">Enter Your Ph:no</Label>
+                <input type="tel" class="fname" name="phone" placeholder="Enter Your Phone number" required>
+                <br>
+                <label for="numb" class="name">Enter Quantity</label>
+                <input type="number" class="quantity" name="quantity" min="1" placeholder="Enter the number of Objects you have Found" required>
+                <br>
+                <label for="img" class="name">Enter Image</label>
+                <input type="file" id="email" class="fname" name="img" placeholder="Upload image" required>
+                <br>
+                <label for="message" class="name">Discription</label>
+                <textarea name="message" class="fname" id="" cols="30" rows="10" placeholder="Discribe The object You have Found" required></textarea>
+                <input type="submit" value="Submit" id="c_f_submit" name="submit">
+            </form>
+        </div>
+
+
     </div>
+
+
+
+
+        <!-- the form for Request for Lost ends here -->
+
+
+
+
+
+
+    
 </body>
 </html>

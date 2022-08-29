@@ -1,6 +1,6 @@
-<?php
-
-  session_start();//session starts here
+<?php  
+   
+  session_start();//session starts here  
   if(isset($_SESSION['useremail'])){
     header('location:index.php');
   exit();
@@ -12,12 +12,13 @@
     <meta charset="utf-8">
     <title>login page</title>
     <link rel="stylesheet" href="CSS/stylesheet.css">
-
+    
   </head>
   <body>
+    
 
       <div class="logo">
-        <a href="index.php"><img src="logo\mainlogo1.PNG" alt="mainlogo" class="mainlogo"></a>
+        <img src="logo\mainlogo1.PNG" alt="mainlogo" class="mainlogo">
       </div>
       <div class="login">
         <div class="name">
@@ -28,11 +29,14 @@
             <input type="password" id="pwd" name="pwd" placeholder="Enter Your password"><br>
              <input type="submit" value="login" name="login">
           </form>
-
+          
           <hr id="hr">
           <button onclick="window.location.href='Register.html'" id="create_new_account">Create New Account</button>
         </div>
+
       </div>
+
+
 
   </body>
 </html>
