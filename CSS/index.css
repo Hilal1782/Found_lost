@@ -1,0 +1,79 @@
+   body{
+   margin: 0;
+   padding: 0;
+   }
+ 
+             .par{
+           
+                   font-size: 20px;
+                   color: #fff;
+                   line-height: 30px;
+                   margin-top: 20px;
+                   font-family: 'Montserrat', sans-serif;
+       
+                   position: absolute;
+                right: 15%;
+               bottom: 30%;
+               left: 15%;
+               z-index: 10;
+               padding-top: 20px;
+               padding-bottom: 20px;
+               
+               text-align: center;    
+       
+             }
+             .heading1 {
+                padding-top: 50px;
+                font-size: 60px;
+                color: #fff;
+                font-family: 'Montserrat', sans-serif;
+                line-height: 60px;
+                text-shadow: 3px 4px 5px rgb(16 16 16 / 20%); 
+       
+                position: absolute;
+                right: 15%;
+               bottom: 50%;
+               left: 15%;
+               z-index: 10;
+               padding-top: 20px;
+               padding-bottom: 20px;
+               
+               text-align: center;
+             }  
+             .button {
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius:25px;
+                background-color: #4CAF50;
+                position: absolute;
+                right: 15%;
+                bottom: 23%;
+                left: 35%;
+                width: 250px;
+                font-size: 20px;
+                color: #fff;
+                line-height: 30px;
+                font-family: 'Montserrat', sans-serif;
+             
+               
+       }
+       .button1{
+                position: absolute;
+                bottom: 23%;
+                left: 30%;
+                width: 250px;
+       
+       }
+       .button2{
+                position: absolute;
+                bottom: 23%;
+                left: 50%;
+                width: 250px;
+       }
