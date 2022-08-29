@@ -2,7 +2,7 @@
 
 include'db.php';
 
-if(isset($_POST['lost_submit'])){
+if(isset($_POST['submit'])){
 
 	$title = $_POST['title'];
 	$phone = $_POST['phone'];
@@ -10,7 +10,7 @@ if(isset($_POST['lost_submit'])){
 	$file = $_FILES['img'];
 	$message = $_POST['message'];
 
-	//print_r($message);
+	//print_r($file);
 
 	$filename = $file['name'];
 	$filepath = $file['tmp_name'];
@@ -18,13 +18,13 @@ if(isset($_POST['lost_submit'])){
 
 	if($fileerror == 0){
 		
-		$destenfile = 'lost/'.$filename;
-		move_uploaded_file($filepath, $destenfile);
+		$destfile = 'upload/'.$filename;
+		move_uploaded_file($filepath, $destfile);
 
 		//$insertquery = "INSERT INTO found_data( title, phone, quantity, img, message ) VALUES('$title', '$phone', '$quantity', '$destfile', '$message')";
 
 
-		$insert = "INSERT Into  lost_data ( title ,  phone,  quantity ,  img ,  message  ) VALUES ('$title', '$phone','$quantity', '$destenfile', '$message')";
+		$insert = "INSERT Into  found_data ( title ,  phone,  quantity ,  img ,  message  ) VALUES ('$title', '$phone','$quantity', '$destfile', '$message')";
   
 		//$stmt = $con->prepare($insert);
 		//$stmt->bind_param("siiss", $title, $phone,$quantity, $destfile, $message);
@@ -40,12 +40,12 @@ if(isset($_POST['lost_submit'])){
 
 		if ($query) {
 			// code...
-			echo "inserted";
+			// echo "inserted this is found";
 		}else{
 			echo'error';
 		}
 
-		header('location:lost_display.php');
+		header('location:found_display.php');
 
 	}
 

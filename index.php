@@ -1,7 +1,12 @@
 <?php
 session_start();
 
+
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +31,7 @@ session_start();
 
 <body>
     <!-- This is the start of hearder -->
+
 
     <header>
 
@@ -55,28 +61,42 @@ session_start();
         <!--This is the login buttion inside website-->
 
         <?php
-        if(isset($_SESSION['useremail']))
-        {
+        if(isset($_SESSION['useremail']))  
+        {     
             echo'
             <div>
+
             <a href="logout.php">
                 <input type="submit" value="logout" name= "main_login_btn" id="login-button">
                 <div class="navbar1"></div>
             </a>
             <p class="navbar1">'.ucfirst($_SESSION['username']).'</p>
+            
+
         </div>';
 
+       
+        
+        
         }  else{
             echo'
             <div>
+
             <a href="login.php">
                 <input type="submit" value="login" name= "main_login_btn" id="login-button">
             </a>
+
         </div>';
-
+        
         }
-
+        
         ?>
+
+
+
+        
+
+
     </header>
 
     <!--This is the end of header section-->
@@ -85,23 +105,31 @@ session_start();
     <!--The static page-->
 
     <div class="header_h">
-        <h1 class="heading1">Hi
-        <?php
-        if(isset($_SESSION['useremail']))
+        <h1 class="heading1">Hi 
+        <?php 
+        if(isset($_SESSION['useremail']))  
         {
             echo ucfirst($_SESSION['username']);
-
+       
+        
+        
         }  else{
             echo'Login to';
+        
         }
-
+        
         ?>
          Report what you Found or Lost </h1>
         <p class="par"> Do you have something to report, to help, any one today? Post it at Lost & Found, its free, for global people and very easy to use! </p>
         <button class="button button1" onclick="window.location.href='request_found.php';">Request For Found</button>
-        <button class="button button2 " onclick="window.location.href='request_lost.php';">Request For Lost</button>
-    </div>
+        <button class="button button2 " onclick="window.location.href='request_lost.html';">Request For Lost</button>
+    </div>  
 
 </body>
 
 </html>
+
+<!--if(!isset($_SESSION['username'])){
+        header('location:login.php');
+       exit();
+    }-->
