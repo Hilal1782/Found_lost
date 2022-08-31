@@ -1,13 +1,10 @@
 <?php
 session_start();
-
 if(!isset($_SESSION['useremail'])){
     header('location:login.php');
    exit();
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +17,10 @@ if(!isset($_SESSION['useremail'])){
 <body>
     <!-- This is the start of hearder -->
     
-
     <header>
-
         <!--Web Logo is the main logo of website-->
-
         <a href="#" class="Web-Logo"><span>LOST</span> & <span>Found</span></a>
-
         <!--This is the navigation bar-->
-
         <nav class="navbar">
             <a href="index.php">HOME</a>
             <a href="found_display.php">Found</a>
@@ -42,21 +34,7 @@ if(!isset($_SESSION['useremail'])){
             </div>
             <a href="aboutUs.php">About Us</a>
             <a href="contactUs.php">Contact Us</a>
-
         </nav>
-
-
-
-
-
-        <!--This is the login buttion inside website-->
-
-
-
-
-
-        <!--This is the login buttion inside website-->
-
         <?php
         if(isset($_SESSION['useremail']))  
         {     
@@ -67,14 +45,9 @@ if(!isset($_SESSION['useremail'])){
                 <input type="submit" value="logout" name= "main_login_btn" id="login-button">
                 <div class="navbar1"></div>
             </a>
-            <p class="navbar1">'.ucfirst($_SESSION['username']).'</p>
-            
-
+            <p class="navbar1">'.ucfirst($_SESSION['username']).'</p>        
         </div>';
-
-       
-        
-        
+             
         }  else{
             echo'
             <div>
@@ -84,31 +57,15 @@ if(!isset($_SESSION['useremail'])){
             </a>
 
         </div>';
-        
-        }
-        
+        }    
         ?>
-
-
     </header>
-
-
     <!--This is the end of header section-->
-    
-
-
-
-
 
     <!-- the form for Request for Lost Start here -->
-
-
-
     <div id="main-con">
         <h1 id="con_h">Request for Lost</h1>  
-
         <div>
-
             <form action="lost_data.php" method="post" enctype="multipart/form-data">
                 <label for="title" class="name" id="name">Enter Your Title/Name of the found object</label>
                 <input type="text" class="fname" name="title" placeholder="Enter Your Title/Name of Found object" required>
@@ -127,16 +84,7 @@ if(!isset($_SESSION['useremail'])){
                 <input type="submit" value="Submit" id="c_f_submit" name="lost_submit">
             </form>
         </div>
-
-
-
     </div>
-
-
-
-
         <!-- the form for Request for Lost ends here -->
 </body>
-
-
 </html>
